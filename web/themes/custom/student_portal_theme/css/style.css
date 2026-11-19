@@ -1,0 +1,271 @@
+
+/* Homepage layout */
+.layout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Welcome section */
+.welcome-section {
+  padding: 40px 20px;
+  margin: 25px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.welcome-section p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Services section */
+.features-section {
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.features-section h2 {
+  color: #1e3a5f;
+  margin-bottom: 25px;
+}
+
+/* Service cards */
+.feature-card {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: 280px;
+  min-height: 170px;
+  padding: 25px 20px;
+  margin: 12px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+  color: #1e3a5f;
+  margin-top: 5px;
+}
+
+.feature-card p {
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* Admission section */
+.admission-section {
+  margin: 25px 20px;
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+  background-color: #e8f5e9;
+  color: #256029;
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+  .site-header {
+    padding: 20px 10px;
+  }
+
+  .welcome-section {
+    margin: 15px 10px;
+    padding: 25px 15px;
+  }
+
+  .feature-card {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+
+  .admission-section {
+    margin: 15px 10px;
+  }
+}
+
+
+/* ===== New Student Portal Theme Colours ===== */
+
+
+/* Header */
+.site-header {
+  background: linear-gradient(135deg, #17365d, #2563eb);
+  color: #ffffff;
+  padding: 45px 20px;
+}
+
+.site-header h1 {
+  color: #ffffff;
+  font-size: 36px;
+}
+
+.site-header p {
+  color: #dbeafe;
+  font-size: 18px;
+}
+
+/* Welcome section */
+.welcome-section {
+  background-color: #dbeafe;
+  border-left: 6px solid #2563eb;
+}
+
+.welcome-section h2 {
+  color: #17365d;
+}
+
+.welcome-section p {
+  color: #334155;
+}
+
+/* Services heading */
+.features-section h2 {
+  color: #17365d;
+  font-size: 28px;
+}
+
+/* Service cards */
+.feature-card {
+  background: linear-gradient(145deg, #ffffff, #e0edff);
+  border: 1px solid #bfdbfe;
+  border-top: 5px solid #2563eb;
+}
+
+.feature-card h3 {
+  color: #17365d;
+}
+
+.feature-card p {
+  color: #475569;
+}
+
+/* Admission section */
+.admission-section {
+  background-color: #ccfbf1;
+  border: 1px solid #5eead4;
+  color: #115e59;
+}
+
+.admission-section h2 {
+  color: #0f766e;
+}
+
+/* Footer */
+.site-footer {
+  background: linear-gradient(135deg, #17365d, #0f766e);
+  color: #ffffff;
+  padding: 25px;
+}
+
+
+
+/* =================================
+   MODERN STUDENT PORTAL DESIGN
+================================= */
+
+/* Website foundation */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f1f5f9;
+  background-image: none;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* Main page container */
+.layout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f1f5f9;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+/* Smooth page appearance */
+* {
+  box-sizing: border-box;
+}
+
+
+/* Student Section */
+.student-section {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.student-section h2 {
+  color: #17365d;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+/* Student Card Layout */
+.student-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+
+/* Individual Student Card */
+.student-card {
+  background-color: #ffffff;
+  width: 200px;
+  flex: 0 0 200px;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #bfdbfe;
+  border-top: 5px solid #2563eb;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  display:inline-block
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+}
+
+.student-card h3 {
+  color: #17365d;
+  margin-bottom: 8px;
+}
+
+.student-card p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.student-status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.student-status.active {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.student-status.inactive {
+  background-color: #fee2e2;
+  color: #991b1b;
+}

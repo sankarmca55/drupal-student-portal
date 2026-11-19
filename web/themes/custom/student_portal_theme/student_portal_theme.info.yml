@@ -1,0 +1,16 @@
+name: Student Portal Theme
+type: theme
+description: 'My first Drupal 11 custom theme for learning Twig.'
+core_version_requirement: ^11
+base theme: olivero 
+
+
+libraries:
+  - olivero/global-styling
+  - student_portal_theme/global-styling
+
+
+regions:
+  header: Header
+  content: Content
+  footer: Footer
