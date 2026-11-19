@@ -1,0 +1,24 @@
+
+# Composer dependencies
+/vendor/
+
+# Drupal core and contributed extensions
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+
+# Drupal temporary files and uploaded files
+/web/sites/*/files/
+
+# Local Drupal configuration
+/web/sites/*/settings.php
+/web/sites/*/services.yml
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
