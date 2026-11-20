@@ -11,6 +11,7 @@
 # Drupal temporary files and uploaded files
 /web/sites/*/files/
 
+
 # Local Drupal configuration
 /web/sites/*/settings.php
 /web/sites/*/services.yml

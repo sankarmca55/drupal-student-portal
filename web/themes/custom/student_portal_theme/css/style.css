@@ -269,3 +269,78 @@ h3 {
   background-color: #fee2e2;
   color: #991b1b;
 }
+
+
+
+/* =================================
+   STUDENT DIRECTORY TABLE DESIGN
+================================= */
+
+.view-student-directory .views-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Table Heading */
+.view-student-directory .views-table thead th {
+  background-color: #17365d;
+  color: #ffffff;
+  padding: 15px;
+  text-align: left;
+  font-size: 15px;
+}
+
+/* Table Cells */
+.view-student-directory .views-table tbody td {
+  padding: 14px 15px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 14px;
+}
+
+/* Alternating Row Colours */
+.view-student-directory .views-table tbody tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+/* Row Hover Effect */
+.view-student-directory .views-table tbody tr:hover {
+  background-color: #dbeafe;
+}
+
+/* Student Name Links */
+.view-student-directory .views-table tbody td a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.view-student-directory .views-table tbody td a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Responsive Student Directory */
+
+.view-student-directory {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.view-student-directory .views-table {
+  min-width: 650px;
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .view-student-directory .views-table thead th,
+  .view-student-directory .views-table tbody td {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
