@@ -1,0 +1,99 @@
+
+<div class="layout-container">
+
+  <header class="site-header">
+    {% set portal_name = 'My Learning Portal' %}
+      <h1>{{ portal_name }}</h1>
+  </header>
+
+  <section class="welcome-section">
+    {% set welcome_message = 'Welcome to My Student Portal!' %}
+    <p>{{ welcome_message }}</p>
+  </section>
+
+<section class="admission-section">
+
+  {% if logged_in %}
+    <h2>Admissions are Open!</h2>
+    <p>Welcome, Administrator! You can now manage admissions.</p>
+  {% else %}
+    <h2>Admissions are Closed!</h2>
+    <p>Please log in to access admission management.</p>
+  {% endif %}
+
+</section>
+{# Student #}
+
+<section class="student-section">
+	<h2>Our Student</h2>
+
+  {% set students = [
+    {'id': 101, 'name': 'Rahul', 'class': '4th','age': 9, 'city': 'Hyderabad', 'email': 'rahul@example.com','status': 'Active'},
+    {'id': 102, 'name': 'Priya', 'class': '5th', 'age': 10, 'city': 'Tirupati', 'email': 'priya@example.com', 'status': 'inactive'},
+    {'id': 103, 'name': 'Kiran', 'class': '6th', 'age': '8',  'email': 'kiran@example.com','status': 'Active'},
+    {'id': 104, 'name': 'Sneha', 'class': '4th', 'age': 10, 'city': 'Hyderabad', 'email':'sneha@example.com','status': 'inactive'},
+    {'id': 105, 'name': 'Arjun', 'class': '5th', 'age': 8, 'city': 'Chennai', 'email': 'arjun@example.com','status': 'inactive'}
+  ] %}
+  <p>Total Students: {{ students|length }}</p>
+  <p>Today's Date : {{"now" | date("d-m-Y") }}</p>
+  <p>Today's Date : {{"now" | date("F d, Y") }}</p>
+  <div class="student-list">
+
+    {% for student in students %}
+
+      <div class="student-card">
+
+        
+        <h3>{{student.name | upper}}</h3>
+        <p><strong>ID : </strong> {{student.id}}</p>
+        <p><strong>Class : </strong> {{student.class }}</p>
+        <p><strong>Age : </strong> {{student.age}}</p>
+        <p><strong>City : </strong> {{student.city |default('Not Provided') }}</p>
+        <p><strong>Email : </strong>{{student.email}}</p> 
+        {% if student.status == 'Active' %}
+          <p>Student status : </p><p class="student-status active">Active</p>
+        {% else %}
+          <p>Student status : </p><p class="student-status inactive">Inactive</p>
+        {% endif %}
+
+      </div>
+
+    {% endfor %}
+
+  </div>
+
+</section>
+
+
+
+
+  <section class="features-section">
+    <h2>Our Services</h2>
+
+    <div class="feature-card">
+      <h3>Student Directory</h3>
+      <p>View the list of students.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Student Profiles</h3>
+      <p>Explore individual student details.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Contact Us</h3>
+      <p>Get in touch with our team.</p>
+    </div>
+
+  </section>
+
+  <main class="site-main">
+    {{ page.content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>Learning Drupal 11 and Twig</p>
+    {{ page.footer }}
+  </footer>
+
+</div>

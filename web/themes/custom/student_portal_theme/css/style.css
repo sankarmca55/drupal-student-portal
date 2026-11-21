@@ -344,3 +344,67 @@ h3 {
     font-size: 13px;
   }
 }
+
+
+/* =================================
+   STUDENT PROFILE DESIGN
+================================= */
+
+.student-profile {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.student-profile-header {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #2563eb;
+}
+
+.student-profile-header h1 {
+  color: #17365d;
+  font-size: 28px;
+  margin: 0;
+}
+
+.student-profile-content {
+  color: #475569;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.student-profile-content strong {
+  color: #17365d;
+}
+
+.student-profile-content .field {
+  margin-bottom: 15px;
+}
+
+
+
+/* Student Profile Responsive Design */
+
+@media (max-width: 768px) {
+
+  .student-profile {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .student-profile-header h1 {
+    font-size: 23px;
+  }
+
+  .student-profile-content {
+    font-size: 14px;
+  }
+
+}
