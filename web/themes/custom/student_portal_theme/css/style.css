@@ -364,6 +364,7 @@ h3 {
   margin-bottom: 25px;
   padding-bottom: 15px;
   border-bottom: 3px solid #2563eb;
+  text-align: center;
 }
 
 .student-profile-header h1 {
@@ -407,4 +408,94 @@ h3 {
     font-size: 14px;
   }
 
+}
+
+
+
+/* Student Profile Card */
+.student-profile {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Profile Heading */
+.student-profile-header {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #2563eb;
+}
+
+.student-profile-header h1 {
+  color: #17365d;
+  font-size: 28px;
+  margin: 0;
+}
+
+/* Profile Fields Layout */
+.student-profile-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Student Photo - Full Width at Top */
+.student-profile-content .field--name-field-student-photo {
+  grid-column: 1 / -1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.student-profile-content .field--name-field-student-photo img {
+  display: block;
+  width: 180px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 10px auto;
+}
+
+/* Other Student Details */
+.student-profile-content .field {
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 8px;
+  margin: 0;
+  width: 100%;
+}
+
+.student-profile-content .field--name-field-student-photo {
+  background: transparent;
+}
+
+/* Field Labels */
+.student-profile-content .field__label {
+  color: #17365d;
+  margin-bottom: 8px;
+}
+
+.student-profile-content .field__item {
+  color: #475569;
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+  .student-profile {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  .student-profile-content {
+    grid-template-columns: 1fr;
+  }
+
+  .student-profile-content .field--name-field-student-photo {
+    grid-column: 1;
+  }
 }
