@@ -413,15 +413,7 @@ h3 {
 
 
 /* Student Profile Card */
-.student-profile {
-  max-width: 850px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #ffffff;
-  border: 1px solid #dbeafe;
-  border-radius: 14px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
+
 
 /* Profile Heading */
 .student-profile-header {
@@ -498,4 +490,122 @@ h3 {
   .student-profile-content .field--name-field-student-photo {
     grid-column: 1;
   }
+}
+
+/* =========================================
+   STUDENT DIRECTORY - VERTICAL DETAILS
+========================================= */
+
+.view-student-directory .view-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.view-student-directory .views-row {
+  min-width: 0;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* Remove individual profile styling inside directory */
+
+.view-student-directory .student-profile {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* Student name */
+
+.view-student-directory .student-profile-header {
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #2563eb;
+}
+
+.view-student-directory .student-profile-header h1 {
+  font-size: 21px;
+  color: #17365d;
+  margin: 0;
+}
+
+/* Student photo */
+
+.view-student-directory .field--name-field-student-photo {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.view-student-directory .field--name-field-student-photo img {
+  width: 130px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Details in vertical layout */
+
+.view-student-directory .student-profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.view-student-directory .student-profile-content .field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 5px;
+  margin: 0;
+  border-bottom: 1px solid #e2e8f0;
+  overflow-wrap: anywhere;
+}
+
+.view-student-directory .student-profile-content .field__label {
+  flex: 0 0 42%;
+  margin: 0;
+  color: #17365d;
+  font-weight: 700;
+}
+
+.view-student-directory .student-profile-content .field__item {
+  flex: 1;
+  text-align: right;
+  color: #475569;
+}
+
+.view-student-directory .student-profile-content a {
+  overflow-wrap: anywhere;
+}
+
+/* Responsive layout */
+
+@media (max-width: 900px) {
+  .view-student-directory .view-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .view-student-directory .view-content {
+    grid-template-columns: 1fr;
+  }
+}
+/* Hide Student Photo label only */
+
+.view-student-directory
+.field--name-field-student-photo .field__label {
+  display: none;
 }
